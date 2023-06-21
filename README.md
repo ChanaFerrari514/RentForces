@@ -6,3 +6,9 @@ Este proyecto consiste en desarollar una plataforma de alquiler específicamente
 # Funcionalidades previstas
 
 Mapa interactivo: Se integrará un mapa en la plataforma que permitirá a los usuarios visualizar las viviendas disponibles en diferentes áreas geográficas.
+
+Sistema de registro e inicio de sesión: Los usuarios podrán registrarse e iniciar sesión en la plataforma para acceder a todas las funcionalidades.
+
+Gestión de perfiles de usuarios: Los usuarios podrán crear y actualizar su perfil, agregar información personal y cargar fotos.
+
+Publicación de viviendas: Los propietarios de viviendas podrán publicar anuncios con descripciones detalladas, fotos e información sobre la disponibilidad.
