@@ -7,7 +7,7 @@ Policias trasladados: Después de prestar juramento, es común que los policías
 
 Policías que buscan alojamiento temporal: Además de los traslados, puede haber situaciones en las que los policías necesiten alojamiento temporal, como asignaciones cortas, investigaciones especiales o asistencia a seminarios o cursos de capacitación. La plataforma puede ofrecerles opciones de alquiler a corto plazo para satisfacer estas necesidades específicas.
 
-Compañeros policías como arrendadores: Muchos policías pueden tener propiedades adicionales o habitaciones disponibles para alquilar. Al ofrecerles la oportunidad de publicar anuncios en tu plataforma, podrán encontrar inquilinos confiables y de confianza en su propia red profesional. Los policías a menudo prefieren alquilar a sus compañeros debido a la confianza y el entendimiento mutuo.
+Compañeros policías como arrendadores: Muchos policías pueden tener propiedades adicionales o habitaciones disponibles para alquilar. Al ofrecerles la oportunidad de publicar anuncios en esa plataforma, podrán encontrar inquilinos confiables y de confianza en su propia red profesional. Los policías a menudo prefieren alquilar a sus compañeros debido a la confianza y el entendimiento mutuo.
 
 Facilidad de uso y seguridad: Al dirigirte a los policías como clientes, puedes enfocar tus esfuerzos en brindarles una plataforma segura y confiable. Puedes implementar medidas de seguridad adicionales, como verificaciones de antecedentes o sistemas de revisión de usuarios, para garantizar la seguridad tanto de los arrendadores como de los inquilinos.
 
