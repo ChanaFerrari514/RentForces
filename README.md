@@ -3,7 +3,7 @@ Plataforma de alquiler para las fuerzas armadas
 
 Este proyecto consiste en desarollar una plataforma de alquiler específicamente dirigida a las fuerzas armadas, como fuerza y cuerpos de seguridad como la policía, militar etc... La plataforma permitirá a los miembros de las fuerzas armadas encontrar y alquilar alojamientos adecuados a sus necesidades.
 
-Policias trasladados: Después de prestar juramento, es común que los policías sean asignados a diferentes ciudades o regiones por un período determinado, a menudo dos años. Durante este tiempo, necesitarán alojamiento temporal en su nueva ubicación. Tu plataforma puede proporcionarles una solución conveniente para encontrar viviendas adecuadas y seguras durante su asignación.
+Policias trasladados: Después de prestar juramento, es común que los policías sean asignados a diferentes ciudades o regiones por un período determinado, a menudo dos años. Durante este tiempo, necesitarán alojamiento temporal en su nueva ubicación. Mi plataforma puede proporcionarles una solución conveniente para encontrar viviendas adecuadas y seguras durante su asignación.
 
 Policías que buscan alojamiento temporal: Además de los traslados, puede haber situaciones en las que los policías necesiten alojamiento temporal, como asignaciones cortas, investigaciones especiales o asistencia a seminarios o cursos de capacitación. Tu plataforma puede ofrecerles opciones de alquiler a corto plazo para satisfacer estas necesidades específicas.
 
