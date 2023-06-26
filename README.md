@@ -46,11 +46,12 @@ Compañeros policías como arrendadores: Muchos policías pueden tener propiedad
 ### Comunicación con la API: 
 * Se utilizará Axios para las solicitudes HTTP entre el front-end y el back-end.
 
-## Definición técnica
+# Definición técnica
 
-# Base de datos
+## Base de datos
 
 Tendré 3 tablas:
+  Usuarios, alojamiento y reservas.
 
 1- Usuarios:
 * id
@@ -73,5 +74,7 @@ Tendré 3 tablas:
 * Alojamiento_id
 * Fecha_inicio
 * Fecha_fin
+
+  
 
 
