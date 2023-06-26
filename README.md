@@ -9,7 +9,9 @@ Policías que buscan alojamiento temporal: Además de los traslados, puede haber
 
 Compañeros policías como arrendadores: Muchos policías pueden tener propiedades adicionales o habitaciones disponibles para alquilar. Al ofrecerles la oportunidad de publicar anuncios en esa plataforma, podrán encontrar inquilinos confiables y de confianza en su propia red profesional. Los policías a menudo prefieren alquilar a sus compañeros debido a la confianza y el entendimiento mutuo.
 
+# Beneficios para los usuarios: Policías
 
+Enfocarme en los policías como clientes en mi aplicación de búsqueda de alojamiento tiene varias ventajas. Los policías comparten una conexión especial basada en la confianza y el compañerismo. Al ofrecerles la oportunidad de vivir con compañeros de profesión, se promueve ese vínculo y se crea un ambiente de apoyo. Además, alquilar entre policías ofrece precios más accesibles, flexibilidad para los traslados, coordinación en el trabajo y privacidad en cuanto a la divulgación de la profesión. Se busca proporcionar una solución adaptada a sus necesidades específicas y mantener un entorno seguro y confiable.
 
 # Funcionalidades previstas
 
