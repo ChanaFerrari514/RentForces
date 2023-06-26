@@ -1,7 +1,7 @@
 # RentForces
 Plataforma de alquiler para las fuerzas armadas
 
-Este proyecto consiste en desarollar una plataforma de alquiler específicamente dirigida a las fuerzas armadas, como fuerza y cuerpos de seguridad como la policía, militar etc... La plataforma permitirá a los miembros de las fuerzas armadas encontrar y alquilar alojamientos adecuados a sus necesidades.
+Este proyecto consiste en desarollar una plataforma de alquiler específicamente dirigida a las fuerzas armadas, como fuerza y cuerpos de seguridad como la policía. La plataforma permitirá a los miembros de las fuerzas armadas encontrar y alquilar alojamientos adecuados a sus necesidades.
 
 Policias trasladados: Después de prestar juramento, es común que los policías sean asignados a diferentes ciudades o regiones por un período determinado, a menudo dos años. Durante este tiempo, necesitarán alojamiento temporal en su nueva ubicación. La plataforma puede proporcionarles una solución conveniente para encontrar viviendas adecuadas y seguras durante su asignación.
 
