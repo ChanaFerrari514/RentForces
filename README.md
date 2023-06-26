@@ -78,18 +78,18 @@ Compañeros policías como arrendadores: Muchos policías pueden tener propiedad
 ## Endpoints
 
 1. Usuarios:
-        POST /usuarios: Crear un nuevo usuario. Recibe el nombre, email y contraseña del usuario en el cuerpo de la solicitud. Devuelve el ID del nuevo usuario creado.
-        POST /usuarios/login: Iniciar sesión de usuario. Recibe el email y contraseña en el cuerpo de la solicitud. Devuelve un token de autenticación.
+        * POST /usuarios: Crear un nuevo usuario. Recibe el nombre, email y contraseña del usuario en el cuerpo de la solicitud. Devuelve el ID del nuevo usuario creado.
+       * POST /usuarios/login: Iniciar sesión de usuario. Recibe el email y contraseña en el cuerpo de la solicitud. Devuelve un token de autenticación.
 
-    Alojamientos:
-        GET /alojamientos: Obtener una lista de todos los alojamientos disponibles.
-        GET /alojamientos/{id}: Obtener información detallada de un alojamiento específico.
-        POST /alojamientos: Crear un nuevo alojamiento. Recibe los datos del alojamiento en el cuerpo de la solicitud. Devuelve el ID del nuevo alojamiento creado.
+2. Alojamientos:
+       * GET /alojamientos: Obtener una lista de todos los alojamientos disponibles.
+       * GET /alojamientos/{id}: Obtener información detallada de un alojamiento específico.
+       * POST /alojamientos: Crear un nuevo alojamiento. Recibe los datos del alojamiento en el cuerpo de la solicitud. Devuelve el ID del nuevo alojamiento creado.
         PUT /alojamientos/{id}: Actualizar los datos de un alojamiento existente. Recibe los datos actualizados en el cuerpo de la solicitud.
 
-    Reservas:
-        GET /reservas: Obtener una lista de todas las reservas realizadas por el usuario autenticado.
-        POST /reservas: Realizar una nueva reserva. Recibe el ID del alojamiento y las fechas de inicio y fin de la reserva en el cuerpo de la solicitud. Devuelve el ID de la nueva reserva creada.
+3. Reservas:
+        * GET /reservas: Obtener una lista de todas las reservas realizadas por el usuario autenticado.
+        * POST /reservas: Realizar una nueva reserva. Recibe el ID del alojamiento y las fechas de inicio y fin de la reserva en el cuerpo de la solicitud. Devuelve el ID de la nueva reserva creada.
   
 
 
