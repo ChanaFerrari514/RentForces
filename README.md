@@ -48,7 +48,7 @@ Compañeros policías como arrendadores: Muchos policías pueden tener propiedad
 
 ## Definición técnica
 
-#Base de datos
+# Base de datos
 
 Tendré 3 tablas:
 
