@@ -50,14 +50,14 @@ Compañeros policías como arrendadores: Muchos policías pueden tener propiedad
 
 ## Base de datos
 
-Tendré 3 tablas:
-  Usuarios, alojamiento y reservas.
+### Tablas propuestas:
+  
 
-1- Usuarios:
-* id
-* Nombre
-* Email
-* Contraseña
+1. Usuarios:
+- id
+- nombre
+- email
+- contraseña
 
 2- Alojamientos:
 * id
@@ -74,6 +74,7 @@ Tendré 3 tablas:
 * Alojamiento_id
 * Fecha_inicio
 * Fecha_fin
+
 
   
 
