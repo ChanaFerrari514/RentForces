@@ -52,7 +52,7 @@ Enfocarme en los policías como clientes en mi aplicación de búsqueda de aloja
 
 ## Base de datos
 
-### Tablas propuestas:
+### Mis tablas:
   
 
 1. Usuarios:
