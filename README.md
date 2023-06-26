@@ -59,21 +59,21 @@ Compañeros policías como arrendadores: Muchos policías pueden tener propiedad
 - email
 - contraseña
 
-2- Alojamientos:
-* id
-* Propietario_id
-* Nombre del alojamiento
-* Descripción
-* Ubicación
-* Precio
-* Disponibilidad
+2. Alojamientos:
+- id
+- propietario_id
+- nombre del alojamiento
+- descripción
+- ubicación
+- precio
+- disponibilidad
 
-3- Reservas:
-* id
-* Usuario_id
-* Alojamiento_id
-* Fecha_inicio
-* Fecha_fin
+3. Reservas:
+- id
+- usuario_id
+- alojamiento_id
+- fecha_inicio
+- fecha_fin
 
 
   
