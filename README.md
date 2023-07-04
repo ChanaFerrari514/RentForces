@@ -1,5 +1,5 @@
 # RentForces
-Plataforma de alquiler para las fuerzas armadas
+Plataforma de alquiler para las fuerzas armadas.
 
 Este proyecto consiste en desarollar una plataforma de alquiler específicamente dirigida a las fuerzas armadas, como fuerza y cuerpos de seguridad como la policía. La plataforma permitirá a los miembros de las fuerzas armadas encontrar y alquilar alojamientos adecuados a sus necesidades.
 
