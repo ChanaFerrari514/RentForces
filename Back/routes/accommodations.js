@@ -10,7 +10,7 @@ module.exports = (db) => {
     router.put('/:id', authorizer, updateAccommodation(db));
     router.delete('/:id', authorizer, deleteAccommodation(db));
 
-    return = router;
+    return router;
 }
 
 

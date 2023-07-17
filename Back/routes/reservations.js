@@ -5,10 +5,10 @@ const { authorizer } = require('../middlewares');
 // Routes pour les réservations
 module.exports = (db) => {
 
-router.get('/', authorizer, getReservation);
-router.post('/', authorizer, createReservation);
-router.put('/:id', authorizer, updateReservation);
-router.delete('/:id', authorizer, deleteReservation);
+router.get('/', authorizer, getReservation(db));
+router.post('/', authorizer, createReservation(db));
+router.put('/:id', authorizer, updateReservation(db));
+router.delete('/:id', authorizer, deleteReservation(db));
 
 return router;
 }
