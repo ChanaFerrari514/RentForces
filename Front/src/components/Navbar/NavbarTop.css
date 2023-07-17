@@ -1,0 +1,42 @@
+.navtop {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #686F8C;
+    padding: 10px;
+  }
+
+  
+  .navtop ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .navtop li {
+    padding: 15px;
+  }
+  
+  .navtop a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Arial", sans-serif;
+  }
+
+  .navtop-left {
+    margin-right: auto;
+  }
+  
+  .navtop-right {
+    margin-left: auto;
+  }
+ 
+  
+  
