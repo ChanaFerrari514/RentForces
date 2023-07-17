@@ -1,6 +1,6 @@
   const pool = require('../../configs/db');
 
-module.exports = async (req, res, next) => {
+  const createAccommodation = async (req, res, next) => {
   try {
     const { accommodation_name, description, location, price, availability } = req.body;
 
@@ -22,3 +22,5 @@ module.exports = async (req, res, next) => {
     res.status(500).json({ message: 'An error occurred during the creation of the hosting.' });
   }
 };
+
+module.exports = createAccommodation;

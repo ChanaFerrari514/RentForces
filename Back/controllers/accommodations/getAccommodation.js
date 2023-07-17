@@ -1,6 +1,7 @@
+
 const pool = require('../../configs/db');
 
-module.exports = async (req, res, next) => {
+const getAccommodation = async (req, res, next) => {
   try {
     const query = 'SELECT * FROM accommodations';
     const result = await pool.query(query);
@@ -13,8 +14,9 @@ module.exports = async (req, res, next) => {
     });
 
   } catch (error) {
-    // Gestion des erreurs
-    next(error)
+    console.error('Error when fetching accommodations:', error);
+    res.status(500).json({ message: 'An error occurred while fetching accommodations.' });
   }
   };
-  
+
+  module.exports = getAccommodation;

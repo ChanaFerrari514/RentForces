@@ -1,6 +1,6 @@
 const pool = require('../../configs/db');
 
-module.exports = async (req, res, next) => {
+const updateReservation = async (req, res, next) => {
   try {
     // Récupérer les informations nécessaires depuis le corps de la requête
     const { accommodationId, userId, startDate, endDate } = req.body;
@@ -40,3 +40,5 @@ module.exports = async (req, res, next) => {
   }
 
 };
+
+module.exports = updateReservation;
