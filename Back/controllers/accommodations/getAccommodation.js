@@ -1,8 +1,8 @@
-
 const pool = require('../../configs/db');
 
 const getAccommodation = async (req, res, next) => {
   try {
+    console.log(pool);
     const query = 'SELECT * FROM accommodations';
     const result = await pool.query(query);
 
@@ -20,3 +20,4 @@ const getAccommodation = async (req, res, next) => {
   };
 
   module.exports = getAccommodation;
+

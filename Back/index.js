@@ -11,11 +11,7 @@ app.use(cookieParser());
 
 const routes = require('./routes')(db);
 
-
-
 app.use(routes);
-
-
 
 //  Gestion des erreurs 404
 app.use((req, res, next) => {
@@ -29,7 +25,6 @@ app.use(({ statusCode, error }, req, res, next) => {
       message: error.message,
   });
 });
-
 
  app.listen(
   process.env.PORT,
