@@ -1,20 +1,18 @@
-//import { useState } from "react";
 import "./NavbarTop.css";
-
+import { Link } from 'wouter';
 
 function NavbarTop({ links }) {
-
     return (
-    <nav className="navtop">
+      <nav className="navtop">
         <ul>
-            {links.map((link, index) => (
-                <li key={index} className={index === 1 ? "navtop-right" : "navtop-center"}>
-                    <a href="#">{link}</a>          
-                </li>
-            ))}
-        </ul>                
-    </nav>
+          {links.map((link, index) => (
+            <li key={index} className={index === 1 ? "navtop-right" : "navtop-center"}>
+              <Link href={`/${link.toLowerCase().replace(/\s/g, '-')}`}>{link}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     ); 
 }
 
-  export default NavbarTop;
+export default NavbarTop;
