@@ -1,21 +1,24 @@
-import "./NavbarBottom.css";
+// NavbarBottom.jsx
+import React from 'react';
+import { Link } from 'wouter';
+import './NavbarBottom.css';
 
-
-
-function NavbarBottom({ links }) {
-
-    return (
-    <nav className="navbottom">
-      <ul>
-        
-        {links.map((link, index) => (
-          <li key={index}>
-            <a href="#">{link}</a>
-            </li>
-        ))}
-      </ul>
-    </nav>   
-    );
+const NavbarBottom = ({ links }) => {
+  if (!links || links.length === 0) {
+    return null;
   }
 
-  export default NavbarBottom;
+  return (
+    <nav className="navbottom">
+      <ul>
+        {links.map((link, index) => (
+          <li key={index}>
+            <Link to={`/${link.toLowerCase().replace(/\s/g, '-')}`}>{link}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+export default NavbarBottom;

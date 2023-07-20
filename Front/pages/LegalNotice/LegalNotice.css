@@ -1,0 +1,33 @@
+.container {
+    margin-top: 150px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1D3C78;    
+}
+
+p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #1D3C78;
+}
+ol {
+    padding-left: 30px;
+    color: #1D3C78;  
+}
+
+li {
+    margin-bottom: #1D3C78;    
+}
+
+strong {
+    font-weight: bold;
+    color: #1D3C78; 
+}

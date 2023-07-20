@@ -1,11 +1,12 @@
 import React from 'react';
-import NavbarBottom from '../../components/Navbar/NavbarBottom';
-import { Link } from 'wouter';
+import NavbarBottom from '../../src/components/Navbar/NavbarBottom';
+import './LegalNotice.css';
 
-function LegalNotice() {
+
+const LegalNotice = () => {
   
     return (
-      <div>
+      <div className="container">
         <NavbarBottom />
 
         <h1>Legal Notice</h1>
@@ -24,7 +25,7 @@ function LegalNotice() {
             </p>
           </li>
           <li>
-            <stonger>User Conduct</stonger>
+            <strong>User Conduct</strong>
             <p>When using RentForces, you agree not to engage in any activity that may:
               a. Violate any applicable laws or regulations. b. Infringe upon the rights of others,
               including intellectual property rights. c. Interfere with the proper functioning of 
@@ -34,7 +35,7 @@ function LegalNotice() {
             </p>
           </li>
           <li>
-            <stronger>Disclaimer of Liability</stronger>
+            <strong>Disclaimer of Liability</strong>
             <p>RentForces provides its services on an "as is" and "as available" basis. 
               We do not guarantee the accuracy, completeness, or reliability of any information 
               on our platform. We are not liable for any damages or losses resulting from your use 
@@ -42,7 +43,7 @@ function LegalNotice() {
             </p>
           </li>
           <li>
-            <stronger>Links to Third-Party Websites</stronger>
+            <strong>Links to Third-Party Websites</strong>
             <p>Our platform may contain links to third-party websites for your convenience. 
               However, we do not endorse or have control over the content of these websites. 
               Visiting third-party websites is at your own risk, and we are not responsible 

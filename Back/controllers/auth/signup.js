@@ -3,11 +3,11 @@ const { createUser } = require('../../models/auth');
 const errors = require('../../misc/errors');
 
 module.exports = (db) => async (req, res, next) => {
-    const { username, password } = req.body
+    const { email, password } = req.body
     
     const encrypted = await hash.encrypt(password)
 
-    const response = await createUser(await db)(username, encrypted)
+    const response = await createUser(await db)(email, encrypted)
 
     if(!response.ok) return next(errors[500])
 

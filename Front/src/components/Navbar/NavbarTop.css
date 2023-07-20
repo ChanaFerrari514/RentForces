@@ -1,11 +1,11 @@
 .navtop {
     position: fixed;
-    top: 80px;
+    top: 70px;
     left: 0;
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: #686F8C;
+    background-color: #1D3C78;
     padding: 10px;
   }
 
