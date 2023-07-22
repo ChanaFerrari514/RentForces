@@ -1,0 +1,9 @@
+.dropdown-item-custom {
+    color: #1D3C78;
+    background-color: #1D3C78;
+  }
+
+  .dropdown-menu {
+    --bs-dropdown-bg: #1D3C78; /
+  }
+  

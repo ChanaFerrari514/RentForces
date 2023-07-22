@@ -1,10 +1,14 @@
+const { sql } = require('slonik');
 const pool = require('../../configs/db');
 
 const getAccommodation = async (req, res, next) => {
   try {
     console.log(pool);
-    const query = 'SELECT * FROM accommodations';
-    const result = await pool.query(query);
+
+    const connection = await pool
+    console.log(connection)
+    const query = sql.unsafe`SELECT * FROM accommodations`;
+    const result = await connection.query(query);
 
     const accommodations = result.rows;
 

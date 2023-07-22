@@ -1,3 +1,4 @@
+const { sql } = require('slonik');
 const pool = require('../../configs/db');
 
 const deleteAccommodation = async (req, res) => {
