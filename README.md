@@ -15,20 +15,14 @@ Enfocarme en los policías como clientes en mi aplicación de búsqueda de aloja
 
 # Funcionalidades previstas
 
-### Mapa interactivo: 
-* Se integrará un mapa en la plataforma que permitirá a los usuarios visualizar las viviendas disponibles en diferentes áreas geográficas.
-
 ### Sistema de registro e inicio de sesión: 
 * Los usuarios podrán registrarse e iniciar sesión en la plataforma para acceder a todas las funcionalidades.
 
 ### Gestión de perfiles de usuarios: 
-* Los usuarios podrán crear y actualizar su perfil, agregar información personal y cargar fotos.
+* Los usuarios podrán crear y actualizar su perfil, agregar información personal y cargar fotos de las viviendas.
 
 ### Publicación de viviendas: 
 * Los propietarios de viviendas podrán publicar anuncios con descripciones detalladas, fotos e información sobre la disponibilidad.
-
-### Búsqueda y filtros: 
-* Los usuarios podrán realizar búsquedas de viviendas utilizando criterios como ubicación, precio y comodidades.
 
 ### Sistema de reservas: 
 * Los usuarios podrán reservar viviendas disponibles para períodos específicos.
