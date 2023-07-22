@@ -4,6 +4,7 @@ const ad = [
       title: 'House 1',
       description: 'Description',
       imageSrc: 'https://picsum.photos/200/300',
+      price:'20',
     },
     {
       id: 2,
