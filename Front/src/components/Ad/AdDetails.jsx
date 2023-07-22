@@ -1,7 +1,6 @@
 import React from 'react';
 import { useRoute } from 'wouter';
 import { useState, useEffect } from 'react';
-
 import ad from '../../../data.js';
 
 
@@ -23,7 +22,7 @@ const AdDetails = () => {
   }
 
   const { title, description, imageSrc } = state;
- console.log (state)
+
   return (
     <div style={ {marginTop: '200px'}}>
       <h1>{state.title} Hi </h1>

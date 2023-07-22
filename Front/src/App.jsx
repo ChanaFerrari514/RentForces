@@ -8,6 +8,8 @@ import NavbarBottom from './components/Navbar/NavbarBottom';
 import Home from '../pages/Home/Home';
 import AdDetails from '../src/components/Ad/AdDetails'
 import LegalNotice from '../pages/LegalNotice/LegalNotice';
+import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
+import ContactUs from '../pages/ContactUs/ContactUs';
 import SignIn from '../pages/SignIn/SignIn';
 import SignUpForm from '../pages/SignUpForm/SignUpForm';
 import RentYourHome from '../pages/RentYourHome/RentYourHome';
@@ -70,6 +72,14 @@ const App = () => {
 
           <Route path="/legal-notice">
             <LegalNotice />
+          </Route>
+
+          <Route path="/privacy-policy">
+            <PrivacyPolicy />
+          </Route>
+
+          <Route path="/contact-us">
+            <ContactUs />
           </Route>
 
           <Route path="/ad/:id">
