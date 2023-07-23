@@ -14,4 +14,4 @@ const AdComponent = ({ id, title, description, imageSrc }) => {
     );
 }
 
-export default AdComponent;
+export default AdComponent; 
