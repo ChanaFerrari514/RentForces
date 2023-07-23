@@ -1,14 +1,16 @@
 const express = require('express');
-const router = express.Router();
 
-const getAccommodation = require('./getAccommodation');
+const getAllAccommodations = require('./getAllAccommodations');
+const getOneAccommodation = require('./getOneAccommodation');
 const createAccommodation = require('./createAccommodation');
 const updateAccommodation = require('./updateAccommodation');
 const deleteAccommodation = require('./deleteAccommodation');
+
 module.exports =  {
-getAccommodation,
-createAccommodation,
-updateAccommodation,
-deleteAccommodation
+  getAllAccommodations,
+  getOneAccommodation,
+  createAccommodation,
+  updateAccommodation,
+  deleteAccommodation
 }
 

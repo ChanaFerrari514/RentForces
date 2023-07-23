@@ -1,9 +1,11 @@
 const pool = require('../../configs/db');
+const { sql } = require('slonik');
 
 const getReservation = async (req, res, next) => {
   try {
-    const query = 'SELECT * FROM reservations';
-    const result = await pool.query(query);
+    const connection = await pool;
+    const query = sql.unsafe`SELECT * FROM reservations;`;
+    const result = await connection.query(query);
 
     const reservations = result.rows;
 
@@ -20,5 +22,6 @@ const getReservation = async (req, res, next) => {
     console.error('Error when fetching reservations:', error);
     res.status(500).json({ message: 'An error occurred while fetching reservations.' });
   }
-  };
-  module.exports = getReservation;
+};
+
+module.exports = getReservation;
