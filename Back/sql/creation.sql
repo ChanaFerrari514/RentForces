@@ -1,4 +1,6 @@
 DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS accommodations;
+DROP TABLE IF EXISTS reservations;
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
@@ -18,10 +20,9 @@ CREATE TABLE IF NOT EXISTS accommodations (
     description VARCHAR(300),
     location TEXT,
     price DECIMAL,
-    availability BOOLEAN
--- debut de la date de dispo. de la maison
-    start_disp_date DATE,
-    end_disp_date DATE
+    availability BOOLEAN,
+    start_avail_date DATE,
+    end_avail_date DATE
 );
 
 -- Reservations
@@ -30,7 +31,6 @@ CREATE TABLE IF NOT EXISTS reservations (
     reservation_id SERIAL PRIMARY KEY,
     user_id UUID REFERENCES users(id) ON DELETE CASCADE,
     accommodation_id INT,
--- debut de la date de reservation
     start_res_date DATE,
     end_res_date DATE
 );

@@ -8,5 +8,5 @@ module.exports = (req, res, next) => {
 
     res.locals = payload
 
-    next()
+    next();
 }

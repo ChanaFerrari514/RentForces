@@ -1,12 +1,16 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const db = require('./configs/db');
+const { db, cors: options } = require('./configs');
 const errors = require('./misc/errors');
+
 const app = express();
 
+app.use(cors(options));
 // Pour utiliser les body
 app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 
 const routes = require('./routes')(db);
@@ -21,12 +25,12 @@ app.use((req, res, next) => {
 // Gestion des autres erreurs
 app.use(({ statusCode, error }, req, res, next) => {
   res.status(statusCode).json({
-      success: false,
-      message: error.message,
+    success: false,
+    message: error.message,
   });
 });
 
- app.listen(
+app.listen(
   process.env.PORT,
   () => console.info(`> listening at: ${process.env.PORT}`)
 );
