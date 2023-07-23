@@ -18,7 +18,9 @@ const createUser = (db) => async (username,password) => {
 
 const selectUser = (db) => async (username, compareFn) => {
     try {
-        const user = await db.mayconst { insertUser, selectByEmail } = require('./queries');
+        const user = await db.mayconst 
+        
+        const { insertUser, selectByEmail } = require('./queries');
 
         const createUser = (db) => async (email, username, password) => {
           try { 

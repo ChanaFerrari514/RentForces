@@ -1,4 +1,4 @@
-getconst pool = require('../../configs/db');
+const pool = require('../../configs/db');
 const { sql } = require('slonik');
 
 const getAccommodation = async (req, res, next) => {
