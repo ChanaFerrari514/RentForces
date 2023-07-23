@@ -1,9 +1,10 @@
 .container {
-    margin-top: 150px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
+    padding: 1px;
+    margin-top: 10px;
+    margin-bottom: 300px; 
 }
 
 h1 {

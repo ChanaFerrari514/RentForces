@@ -1,43 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRoute } from 'wouter';
-import { useState, useEffect } from 'react';
-import ad from '../../../data.js';
-import Carousel from 'react-bootstrap/Carousel';
-import CarouselPicture from './CarouselPicture'; 
+import ad from '../../../data'; // Importez l'array ad depuis votre fichier data.js
 import './AdDetails.css'; 
 
-const AdDetails = ({  }) => {
+const AdDetails = () => {
   const [match, params] = useRoute('/ad/:id');
-  const adId = Number (params.id);
-  const [state,setstate] = useState();
+  const adId = Number(params.id);
+  const [state, setState] = useState(null); // Initialisez le state à null
 
   useEffect(() => {
-    const adDetails = ad.filter((hi) => hi.id === adId)[0];
-    setstate(adDetails)
-  },[])
-  
+    const adDetails = ad.find((adItem) => adItem.id === adId);
+    setState(adDetails);
+  }, [adId]);
+
   if (!state) {
-    return <div style={ {marginTop: '200px'}}><p>Ad not found.</p>
-    </div>
+    return (
+      <div style={{ marginTop: '200px' }}>
+        <p>Ad not found.</p>
+      </div>
+    );
   }
 
-  const { title, description, imageSrc } = state;
+  const { title, description, imageSrc,wifiIconSrc, wifiIconAlt, smokingIconSrc, smokingIconAlt, price } = state;
 
   return (
     <div style={{ marginTop: '200px' }}>
       <h1>{title}</h1>
       <p>{description}</p>
-      <Carousel>
-        <Carousel.Item>
-          <CarouselPicture src={imageSrc} alt={title} />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        {/* Ajoutez les autres éléments du carousel ici */}
-      </Carousel>
-
+      <img src={`/${imageSrc}`} alt={title} className="ad-image"/>
+      {/* Affichez l'icône ici */}
+      <img src={`/${wifiIconSrc}`} alt={wifiIconAlt} className="ad-icon"/>
+      <img src={`/${smokingIconSrc}`} alt={smokingIconAlt} className="ad-icon" />
+      <p>Prix : ${price}</p>
     </div>
   );
 }
