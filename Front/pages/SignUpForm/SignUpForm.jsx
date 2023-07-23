@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './SignUpForm.css';
+import axios from 'axios';
 
 const SignUpForm = () => {
+
+
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    //firstName: '',
+    //lastName: '',
     email: '',
+    username: '',
     password: '',
-    confirmPassword: '',
+    //confirmPassword: '',
   });
 
   const handleChange = (e) => {
@@ -19,31 +23,34 @@ const SignUpForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here, e.g., send data to the server
-    console.log(formData);
-  };
+    // Envoie les données du formulaire au backend en utilisant Axios
+    axios.post('http://127.0.0.1:4000/auth/signup', formData)
+    .then((response) => {
+      // Traitez la réponse du serveur ici si nécessaire
+      console.log(response.data);
+    })
+    .catch((error) => {
+      // Traitez les erreurs ici si nécessaire
+      console.error(error);
+    });
+};
+  
 
   return (
     <div className="signup-container">
-    <Form onSubmit={handleSubmit}>
-      <Form.Group controlId="firstName">
-        <Form.Label><strong>First Name</strong></Form.Label>
+  
+  <Form onSubmit={handleSubmit}>
+      <Form.Group controlId="username">
+        <Form.Label><strong>Username</strong></Form.Label>
         <Form.Control
           type="text"
-          name="firstName"
-          value={formData.firstName}
+          name="username"
+          value={formData.username}
           onChange={handleChange}
         />
        
-      </Form.Group>
-      <Form.Group controlId="lastName">
-        <Form.Label><strong>Last Name</strong></Form.Label>
-        <Form.Control
-          type="text"
-          name="lastName"
-          value={formData.lastName}
-          onChange={handleChange}
-        />
+
+        
       </Form.Group>
       <Form.Group controlId="email">
         <Form.Label><strong>Email Address</strong></Form.Label>
@@ -63,15 +70,7 @@ const SignUpForm = () => {
           onChange={handleChange}
         />
       </Form.Group>
-      <Form.Group controlId="confirmPassword">
-        <Form.Label><strong>Confirm Password</strong></Form.Label>
-        <Form.Control
-          type="password"
-          name="confirmPassword"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-        />
-      </Form.Group>
+
       <Button variant="primary" type="submit">
         Sign Up
       </Button>
