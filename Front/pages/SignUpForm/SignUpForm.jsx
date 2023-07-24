@@ -16,14 +16,13 @@ const SignUpForm = () => {
     //confirmPassword: '',
   });
 
+  const [responseMessage, setResponseMessage] = useState('');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const [responseMessage, setResponseMessage] = useState('');
-
-  
   const handleSubmit = (e) => {
     e.preventDefault();
     // Envoie les données du formulaire au backend en utilisant Axios
@@ -38,7 +37,6 @@ const SignUpForm = () => {
     .then((data) => {
       // Traitez la réponse du serveur ici si nécessaire
       setResponseMessage(data.message);
-      console.log(response.data);
     })
       .catch((error) => {
       // Traitez les erreurs ici si nécessaire
