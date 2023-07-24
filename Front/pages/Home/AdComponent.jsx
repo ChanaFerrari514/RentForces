@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'wouter';
 import './AdComponent.css'
 
-const AdComponent = ({ id, title, description, imageSrc, wifiIconSrc, wifiIconAlt, smokingIconSrc, smokingIconAlt, price }) => {
+const AdComponent = ({ id, title, description, imageSrc, wifiIconSrc, wifiIconAlt, smokingIconSrc, smokingIconAlt, 
+    nosmokingIconSrc, nosmokingIconAlt,price }) => {
     return (
         <div className="ad-container">
             <Link href={`/ad/${id}`}>
@@ -11,9 +12,12 @@ const AdComponent = ({ id, title, description, imageSrc, wifiIconSrc, wifiIconAl
             <p className="ad-description">{description}</p>
             <img src={`/${wifiIconSrc}`} alt={wifiIconAlt} className="ad-icon" />
             <img src={`/${smokingIconSrc}`} alt={smokingIconAlt} className="ad-icon" />
+            <img src={`/${nosmokingIconSrc}`} alt={nosmokingIconAlt} className="ad-icon" />
             </Link>
         </div>
     );
 }
 
 export default AdComponent; 
+
+

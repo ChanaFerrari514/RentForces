@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import ad from '../data';
@@ -10,14 +10,13 @@ import AdDetails from '../src/components/Ad/AdDetails'
 import LegalNotice from '../pages/LegalNotice/LegalNotice';
 import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
 import ContactUs from '../pages/ContactUs/ContactUs';
-import SignIn from '../pages/SignIn/SignIn';
+import SignInForm from '../pages/SignInForm/SignInForm';
 import SignUpForm from '../pages/SignUpForm/SignUpForm';
+import UserDashboard from '../pages/UserDashboard/UserDashboard';
 import RentYourHome from '../pages/RentYourHome/RentYourHome';
-import { Router, Switch, Redirect, Route} from 'wouter';
+import { Router, Switch, Redirect, Route, Link } from 'wouter';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-
-
 
 library.add(faUser);
 
@@ -40,17 +39,14 @@ const bottomLinks = ["Legal Notice", "Privacy Policy", "Contact"];
 
 
 const App = () => {
- 
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   return (
     <Router>
     <div>
       <Header title1="RENT" img={img} title2="FORCES"  />
       <NavbarTop links={topLinks} />
-      <NavbarBottom links={bottomLinks} />
-  
-     
-     
+      <NavbarBottom links={bottomLinks} />    
       
       
       <Switch>
@@ -63,11 +59,11 @@ const App = () => {
           </Route> 
 
           <Route path="/sign-up">
-            <SignUpForm />
+            <SignUpForm setIsLoggedIn={setIsLoggedIn} />
           </Route> 
 
           <Route path="/sign-in">
-            <SignIn />
+            <SignInForm setIsLoggedIn={setIsLoggedIn} />
           </Route> 
 
           <Route path="/legal-notice">
@@ -85,7 +81,11 @@ const App = () => {
           <Route path="/ad/:id">
             <AdDetails ad={ad} />
           </Route>
-
+            {/* Rediriger vers la page de connexion si l'utilisateur n'est pas connecté */}
+          <Route path="/user-dashboard">
+            {isLoggedIn ? <UserDashboard /> : <Redirect to="/sign-in" />}
+          </Route>
+             {/* Rediriger vers la page de création de compte par défaut */}
           <Redirect to="/home-page" />
       </Switch> 
       

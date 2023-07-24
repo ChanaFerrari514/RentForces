@@ -1,4 +1,4 @@
-const { insertUser, selectByUsername } = require('./queries');
+const { insertUser, selectByUsername, selectByEmail } = require('./queries');
 
 const createUser = (db) => async (email, username, password) => {
   try {

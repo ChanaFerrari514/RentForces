@@ -21,7 +21,8 @@ const AdDetails = () => {
     );
   }
 
-  const { title, description, imageSrc,wifiIconSrc, wifiIconAlt, smokingIconSrc, smokingIconAlt, price } = state;
+  const { title, description, imageSrc,wifiIconSrc, wifiIconAlt, smokingIconSrc, smokingIconAlt,
+    nosmokingIconSrc, nosmokingIconAlt, price } = state;
 
   return (
     <div style={{ marginTop: '200px' }}>
@@ -31,6 +32,7 @@ const AdDetails = () => {
       {/* Affichez l'icône ici */}
       <img src={`/${wifiIconSrc}`} alt={wifiIconAlt} className="ad-icon"/>
       <img src={`/${smokingIconSrc}`} alt={smokingIconAlt} className="ad-icon" />
+      <img src={`/${nosmokingIconSrc}`} alt={nosmokingIconAlt} className="ad-icon" />
       <p>Prix : ${price}</p>
     </div>
   );
