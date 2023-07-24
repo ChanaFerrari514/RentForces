@@ -21,24 +21,37 @@ const SignUpForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const [responseMessage, setResponseMessage] = useState('');
+
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     // Envoie les données du formulaire au backend en utilisant Axios
-    axios.post('http://127.0.0.1:4000/auth/signup', formData)
-    .then((response) => {
+    fetch('http://127.0.0.1:4000/auth/signup',{
+      method: 'Post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body:JSON.stringify(formData),
+    })
+    .then((response) => response.json())
+    .then((data) => {
       // Traitez la réponse du serveur ici si nécessaire
+      setResponseMessage(data.message);
       console.log(response.data);
     })
-    .catch((error) => {
+      .catch((error) => {
       // Traitez les erreurs ici si nécessaire
       console.error(error);
+      setResponseMessage('An error occurred during registration.');
     });
 };
   
 
   return (
     <div className="signup-container">
-  
+  {responseMessage && <p>{responseMessage}</p>}
+
   <Form onSubmit={handleSubmit}>
       <Form.Group controlId="username">
         <Form.Label><strong>Username</strong></Form.Label>
@@ -47,6 +60,7 @@ const SignUpForm = () => {
           name="username"
           value={formData.username}
           onChange={handleChange}
+          required
         />
        
 
@@ -59,6 +73,7 @@ const SignUpForm = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
+          required
         />
       </Form.Group>
       <Form.Group controlId="password">
@@ -68,6 +83,7 @@ const SignUpForm = () => {
           name="password"
           value={formData.password}
           onChange={handleChange}
+          required
         />
       </Form.Group>
 
