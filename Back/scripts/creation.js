@@ -8,11 +8,11 @@ const deleteAll = async () => {
   // donc users doit etre delete en dernier
   await connection.transaction(async (tx) => {
     await tx.query(sql.unsafe`
-      DROP TABLE IF EXISTS accommodations;
+      DROP TABLE IF EXISTS reservations;
     `);
     
     await tx.query(sql.unsafe`
-      DROP TABLE IF EXISTS reservations;
+      DROP TABLE IF EXISTS accommodations;
     `);
     
     await tx.query(sql.unsafe`
@@ -47,7 +47,8 @@ const accommodations = async () => {
       price DECIMAL,
       availability BOOLEAN,
       start_avail_date DATE,
-      end_avail_date DATE
+      end_avail_date DATE,
+      picture_path VARCHAR(300)
     );
   `);
 };
