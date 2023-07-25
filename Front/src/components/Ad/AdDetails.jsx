@@ -1,3 +1,4 @@
+// page individuel de chaque maison
 import React, { useEffect, useState } from 'react';
 import { useRoute } from 'wouter';
 import ad from '../../../data'; // Importez l'array ad depuis votre fichier data.js
@@ -21,18 +22,17 @@ const AdDetails = () => {
     );
   }
 
-  const { title, description, imageSrc,wifiIconSrc, wifiIconAlt, smokingIconSrc, smokingIconAlt,
-    nosmokingIconSrc, nosmokingIconAlt, price } = state;
+  const { title, imageSrc, description, wifiIconSrc, wifiIconAlt, parkingIconSrc, parkingIconAlt, price } = state;
+
 
   return (
     <div style={{ marginTop: '200px' }}>
       <h1>{title}</h1>
+      <img src={`/${imageSrc}`} alt={title} className="ad-image" />
       <p>{description}</p>
-      <img src={`/${imageSrc}`} alt={title} className="ad-image"/>
-      {/* Affichez l'icône ici */}
-      <img src={`/${wifiIconSrc}`} alt={wifiIconAlt} className="ad-icon"/>
-      <img src={`/${smokingIconSrc}`} alt={smokingIconAlt} className="ad-icon" />
-      <img src={`/${nosmokingIconSrc}`} alt={nosmokingIconAlt} className="ad-icon" />
+      <img src={`/${wifiIconSrc}`} alt={wifiIconAlt} className="ad-icon" />
+      <img src={`/${parkingIconSrc}`} alt={parkingIconAlt} className="ad-icon" />
+     
       <p>Prix : ${price}</p>
     </div>
   );

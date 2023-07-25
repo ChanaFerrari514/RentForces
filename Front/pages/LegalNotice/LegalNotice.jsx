@@ -1,14 +1,15 @@
 import React from 'react';
 import NavbarBottom from '../../src/components/Navbar/NavbarBottom';
+import backgroundImg from '../../public/imgicons/blue-light-g80e388a71_1280.jpg'
 import './LegalNotice.css';
 
 
 const LegalNotice = () => {
   
     return (
-      <div className="container">
+      <div>
         <NavbarBottom />
-
+        <div className="legal-notice-container container">
         <h1>Legal Notice</h1>
         <p>Welcome to RentForces! By using our platform, you agree to comply with 
           the terms and conditions outlined in this Legal Notice. Please read 
@@ -51,7 +52,7 @@ const LegalNotice = () => {
             </p>
           </li>
         </ol>
-        
+        </div>
       </div>
     );
   }
