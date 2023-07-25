@@ -17,7 +17,7 @@ const BackgroundContainer = styled.div`
   width: 100%;
 `;
 
-const SignInForm = () => {
+const SignInForm = ({ setIsLoggedIn }) => {
   const location = useLocation();
 
   const [formData, setFormData] = useState({
@@ -29,12 +29,17 @@ const SignInForm = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
     axios.post('http://127.0.0.1:4000/auth/signin', formData)
       .then((response) => {
+      	console.log(response.data);
+      	localStorage.removeItem('access_token');
+      	localStorage.setItem('access_token', response.data.access_token);
+				//localStorage.setItem('refresh_token', response.data.refresh);
+        setIsLoggedIn(true);
         // Rediriger vers le tableau de bord de l'utilisateur en cas de succès
         location[1]('/user-dashboard');
       })
@@ -44,8 +49,7 @@ const SignInForm = () => {
         // Gérer les erreurs ici si nécessaire
       });
   };
-
-
+  
 
   return (
 

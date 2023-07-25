@@ -18,5 +18,7 @@ module.exports = (db) => async (req, res, next) => {
 
   res.status(200).json({
     success: true, 
+    access_token: res._headers['set-cookie'].split('access_token=')[1].split(';')[0]
   })
 }
+

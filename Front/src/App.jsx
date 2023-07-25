@@ -14,6 +14,7 @@ import SignInForm from '../pages/SignInForm/SignInForm';
 import SignUpForm from '../pages/SignUpForm/SignUpForm';
 import UserDashboard from '../pages/UserDashboard/UserDashboard';
 import RentYourHome from '../pages/RentYourHome/RentYourHome';
+import Help from '../pages/Help/Help';
 import { Router, Switch, Redirect, Route, Link } from 'wouter';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -34,12 +35,12 @@ const topLinks = [{ text: "Home", isDropdown: false },  { text: "Rent Your Home"
 },
 { text: "Help", isDropdown: false }
 ];
-const bottomLinks = ["Legal Notice", "Privacy Policy", "Contact"];
+const bottomLinks = ["Legal Notice", "Privacy Policy", "Contact Us"];
 
 
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <Router>
@@ -57,6 +58,10 @@ const App = () => {
           <Route path="/rent-your-home">
             <RentYourHome />
           </Route> 
+
+          <Route path="/help">
+            <Help />
+          </Route>
 
           <Route path="/sign-up">
             <SignUpForm setIsLoggedIn={setIsLoggedIn} />

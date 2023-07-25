@@ -8,28 +8,27 @@
     flex-direction: column;
     margin-top: 200px;
     margin-bottom: 300px;
-    
-  
 }
 
 .rentyourhome-container h1 {
     color:  #1D3C78;
     margin-bottom: 20px; 
     font-size: 38px;
-
 }
 
 .rentyourhome-container p {
    margin-top: 20px;
    font-size: 22px;
-   
 }
 
 .rentyourhome-container strong {
     font-size: 25px;
-
 }
 
 .rentyourhome-container form{
     margin-top: 44px;
 }
+
+.rentyourhome-container form .form-control {
+    color: #1D3C78;
+  }

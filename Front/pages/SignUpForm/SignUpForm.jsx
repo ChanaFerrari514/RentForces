@@ -17,7 +17,7 @@ const BackgroundContainer = styled.div`
 `;
 
 
-const SignUpForm = () => {
+const SignUpForm = ({ setIsLoggedIn }) => {
   const location = useLocation(); // Pour accéder à la localisation (l'URL)
 
   const [formData, setFormData] = useState({
@@ -36,8 +36,17 @@ const SignUpForm = () => {
 
     axios.post('http://127.0.0.1:4000/auth/signup', formData)
       .then((response) => {
+      	console.log(response.data);
+        if (response.data.access_token) {
+          setIsLoggedIn(true);
+
+      	localStorage.removeItem('access_token');
+      	localStorage.setItem('access_token', response.data.access_token);
         // Rediriger vers la page UserDashboard en cas de succès
         location[1]('/user-dashboard');
+      } else {
+       
+      }
       })
       .catch((error) => {
         console.error(error);
