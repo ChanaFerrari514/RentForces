@@ -1,14 +1,26 @@
 import React from 'react';
+import styled from 'styled-components';
 import NavbarBottom from '../../src/components/Navbar/NavbarBottom';
+import backgroundImg from '../../public/imgicons/police_blackandwhite.jpg';
 import './PrivacyPolicy.css';
+
+const BackgroundContainer = styled.div`
+  background-image: url(${backgroundImg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  height: 100vh;
+  width: 100%;
+`;
 
 const PrivacyPolicy = () => {
 
     return (
-        <div className="container">
+        <div>
             <NavbarBottom />
-
-        <h1>Privacy Policy</h1>
+            <BackgroundContainer>
+            <div className="container">
+        <h1><strong>Privacy Policy</strong></h1>
         <p>At RentForces, we are committed to ensuring the privacy and security of our users' personal information. This Privacy Policy outlines how we collect, use, and protect the data we collect from our users. By using our platform, you consent to the practices described in this Privacy Policy.</p>
         <ol>
             <li>
@@ -36,9 +48,12 @@ const PrivacyPolicy = () => {
             <li>
                 <strong>Contact Us</strong>
                 <p>If you have any questions or concerns about our Privacy Policy or our data practices, please contact us at [info@rentforces.com].</p>
-                <strong>Last Updated: [07/22/2023]</strong>  
+               
             </li>
+            <strong>Last Updated: [07/22/2023]</strong>
         </ol>       
+        </div>
+        </BackgroundContainer>
         </div>
     );
 }

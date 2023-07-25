@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import axios from 'axios';
 import { useLocation } from 'wouter';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import backgroundImg from '../../public/imgicons/police_blackandwhite.jpg';
 import './SignInForm.css'; 
+
+
+const BackgroundContainer = styled.div`
+  background-image: url(${backgroundImg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+`;
 
 const SignInForm = () => {
   const location = useLocation();
@@ -36,6 +48,8 @@ const SignInForm = () => {
 
 
   return (
+
+    <BackgroundContainer>
     <div className="signin-container">
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -68,6 +82,7 @@ const SignInForm = () => {
         </Button>
       </Form>
     </div>
+    </BackgroundContainer>
   );
 };
 

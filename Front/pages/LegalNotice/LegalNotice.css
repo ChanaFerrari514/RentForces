@@ -1,9 +1,4 @@
-body {
-    background-image: url(${backgroundImg});
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* Autres styles pour l'image de fond */
-  }
+
 
 .container {
     max-width: 800px;
@@ -18,7 +13,8 @@ body {
 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #1D3C78;    
+    color: #1D3C78;
+    text-decoration: underline;    
 }
 
 p{

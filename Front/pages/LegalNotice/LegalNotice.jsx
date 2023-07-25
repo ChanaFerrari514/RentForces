@@ -1,16 +1,26 @@
 import React from 'react';
+import styled from 'styled-components';
 import NavbarBottom from '../../src/components/Navbar/NavbarBottom';
-import backgroundImg from '../../public/imgicons/blue-light-g80e388a71_1280.jpg'
+import backgroundImg from '../../public/imgicons/police_blackandwhite.jpg'
 import './LegalNotice.css';
 
+const BackgroundContainer = styled.div`
+  background-image: url(${backgroundImg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  height: 100vh;
+  width: 100%;
+`;
 
 const LegalNotice = () => {
   
     return (
       <div>
         <NavbarBottom />
+        <BackgroundContainer>
         <div className="legal-notice-container container">
-        <h1>Legal Notice</h1>
+        <h1><strong>Legal Notice</strong></h1>
         <p>Welcome to RentForces! By using our platform, you agree to comply with 
           the terms and conditions outlined in this Legal Notice. Please read 
           this notice carefully before using our services.</p>
@@ -44,15 +54,23 @@ const LegalNotice = () => {
             </p>
           </li>
           <li>
-            <strong>Links to Third-Party Websites</strong>
-            <p>Our platform may contain links to third-party websites for your convenience. 
-              However, we do not endorse or have control over the content of these websites. 
-              Visiting third-party websites is at your own risk, and we are not responsible 
-              for any damages or issues arising from their use.
+            <strong>Modification of Terms</strong>
+            <p>RentForces reserves the right to modify this Legal Notice at any time. We will notify 
+              users of significant changes via email or by posting a notice on our platform. Your 
+              continued use of RentForces after such modifications constitutes your acceptance of the 
+              updated terms.
             </p>
           </li>
+          <li>
+            <strong>Contact Information</strong>
+            <p>If you have any questions or concerns about this Legal Notice or our platform, 
+              please contact us at [info@rentforces.com].
+            </p>
+          </li>
+          <strong>Last Updated: [07/22/2023]</strong>
         </ol>
         </div>
+        </BackgroundContainer>
       </div>
     );
   }

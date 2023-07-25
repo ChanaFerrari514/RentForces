@@ -1,17 +1,30 @@
-
+import React from 'react';
+import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import InputGroup from 'react-bootstrap/InputGroup';
 import {DatePicker} from '@gsebdev/react-simple-datepicker';
+import backgroundImg from '../../public/imgicons/police_blackandwhite.jpg';
 import './RentYourHome.css';
+
+const BackgroundContainer = styled.div`
+  background-image: url(${backgroundImg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+`;
+
 
 const RentYourHome = () => {
   const onChangeCallback = ({ target }) => {
 
   };
     return (
+      <BackgroundContainer>
         <div className='rentyourhome-container'>
             <h1>You want to rent your home to a responsible person from the forces?</h1>
             
@@ -172,7 +185,7 @@ const RentYourHome = () => {
     
     
           </div>
-       
+          </BackgroundContainer>
   );
 };
 

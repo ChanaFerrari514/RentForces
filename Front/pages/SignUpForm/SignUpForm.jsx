@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 import { Link, useLocation } from 'wouter';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import backgroundImg from '../../public/imgicons/police_blackandwhite.jpg';
 import './SignUpForm.css';
+
+const BackgroundContainer = styled.div`
+  background-image: url(${backgroundImg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+`;
+
 
 const SignUpForm = () => {
   const location = useLocation(); // Pour accéder à la localisation (l'URL)
@@ -34,8 +46,13 @@ const SignUpForm = () => {
   };
 
   return (
+    <BackgroundContainer>
     <div className="signup-container">
+      
       <Form onSubmit={handleSubmit}>
+      <p>
+       You already have an account? <Link to="/sign-in">Sign In</Link>
+      </p>
         <Form.Group controlId="username">
           <Form.Label><strong>Username</strong></Form.Label>
           <Form.Control
@@ -71,10 +88,9 @@ const SignUpForm = () => {
           Sign Up
         </Button>
       </Form>
-      <p>
-        Already have an account? <Link to="/sign-in">Sign In</Link>
-      </p>
+     
     </div>
+    </BackgroundContainer>
   );
 };
 

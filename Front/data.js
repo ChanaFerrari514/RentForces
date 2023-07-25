@@ -2,7 +2,7 @@ const ad = [
   {
     id: 1,
     title: 'Malaga',
-    description: 'Description',
+    description: 'Cozy Retreat with Private Bathroom & Kitchen ',
     imageSrc: 'imgicons/01-outside.jpg', 
     wifiIconSrc:'imgicons/A-10-wi-fi.png', 
     wifiIconAlt:'icon-wifi-figurel',
@@ -13,7 +13,7 @@ const ad = [
     {
       id: 2,
       title: 'Albacete',
-      description: 'Discover a hidden gem in this cozy getaway, offering modern amenities and a warm ambiance that will make you feel right at home during your stay.',
+      description: 'Urban Oasis with Modern Amenities ',
       imageSrc: 'imgicons/02-outside.jpg',
       wifiIconSrc:'imgicons/A-10-wi-fi.png', 
       wifiIconAlt:'icon-wifi-figurel',
@@ -24,7 +24,7 @@ const ad = [
     {
       id: 3,
       title: 'Madrid',
-      description: 'Description',
+      description: 'House Near Metro & Supermarket',
       imageSrc: 'imgicons/03-outside.jpg',
       wifiIconSrc:'imgicons/A-10-wi-fi.png', 
       wifiIconAlt:'icon-wifi-figurel',
@@ -35,7 +35,7 @@ const ad = [
     {
       id: 4,
       title: 'Lisbon',
-      description: 'Description',
+      description: 'Tranquil Haven Near Metro & Supermarket ',
       imageSrc: 'imgicons/04-outside.jpg',
       wifiIconSrc:'imgicons/A-10-wi-fi.png',
       wifiIconAlt:'icon-wifi-figurel',
@@ -47,7 +47,7 @@ const ad = [
     {
       id: 5,
       title: 'Cuenca',
-      description: 'Description',
+      description: 'Charming Accommodation with Private Amenities',
       imageSrc: 'imgicons/05-outside.jpg',
       wifiIconSrc:'imgicons/A-10-wi-fi.png', 
       wifiIconAlt:'icon-wifi-figurel',
@@ -58,7 +58,7 @@ const ad = [
     {
       id: 6,
       title: 'Barcelona',
-      description: 'Description',
+      description: 'Accommodation Close to Metro & Supermarket',
       imageSrc: 'imgicons/06-outside.jpg',
       wifiIconSrc:'imgicons/A-10-wi-fi.png', 
       wifiIconAlt:'icon-wifi-figurel',

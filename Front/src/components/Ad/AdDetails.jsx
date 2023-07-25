@@ -1,7 +1,9 @@
 // page individuel de chaque maison
 import React, { useEffect, useState } from 'react';
 import { useRoute } from 'wouter';
-import ad from '../../../data'; // Importez l'array ad depuis votre fichier data.js
+import Carousel from 'react-bootstrap/Carousel';
+import { DatePicker } from '@gsebdev/react-simple-datepicker';
+import adindividuel from '../../../adindividuel';
 import './AdDetails.css'; 
 
 const AdDetails = () => {
@@ -10,7 +12,7 @@ const AdDetails = () => {
   const [state, setState] = useState(null); // Initialisez le state à null
 
   useEffect(() => {
-    const adDetails = ad.find((adItem) => adItem.id === adId);
+    const adDetails = adindividuel.find((adItem) => adItem.id === adId);
     setState(adDetails);
   }, [adId]);
 
@@ -22,20 +24,43 @@ const AdDetails = () => {
     );
   }
 
-  const { title, imageSrc, description, wifiIconSrc, wifiIconAlt, parkingIconSrc, parkingIconAlt, price } = state;
+  const { title, imageSrc, image2Src, adDescription, wifiIconSrc, wifiIconAlt, parkingIconSrc, parkingIconAlt, price } = state;
 
+  // Create a callback function for handling the date change event
+  const onChangeCallback = (selectedDate) => {
+    // Handle the selected date here if needed
+    console.log('Selected date:', selectedDate);
+  };
 
   return (
     <div style={{ marginTop: '200px' }}>
       <h1>{title}</h1>
-      <img src={`/${imageSrc}`} alt={title} className="ad-image" />
-      <p>{description}</p>
+      <Carousel>
+        <Carousel.Item>
+          <img src={`/${imageSrc}`} alt={title} className="carousel-image" />
+         
+          <Carousel.Caption>
+          </Carousel.Caption>
+        </Carousel.Item>
+       
+        <Carousel.Item>
+          <img src={`/${image2Src}`} alt={title} className="carousel-image" />
+          <Carousel.Caption>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+
+
+      </Carousel>
+      <p>{adDescription}</p>
       <img src={`/${wifiIconSrc}`} alt={wifiIconAlt} className="ad-icon" />
       <img src={`/${parkingIconSrc}`} alt={parkingIconAlt} className="ad-icon" />
-     
-      <p>Prix : ${price}</p>
+      <p>Prix : €{price}</p>
+
+      <DatePicker id="datepicker-id" name="date-demo" onChange={onChangeCallback} value={'01/02/2023'} />
     </div>
+    
   );
-}
+};
 
 export default AdDetails;

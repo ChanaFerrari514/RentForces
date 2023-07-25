@@ -11,7 +11,7 @@ const AdComponent = ({ id, title, price, description, imageSrc, wifiIconSrc, wif
         <h2 className="ad-title">{title}</h2>
         <img src={imageSrc} alt={title} className="ad-image" />
         <p className="ad-description">{description}</p>
-        <p>Price : ${price}</p>
+        <p>Price : €{price}</p>
         <img src={wifiIconSrc} alt={wifiIconAlt} className="ad-icon" />
         <img src={parkingIconSrc} alt={parkingIconAlt} className="ad-icon" />
         

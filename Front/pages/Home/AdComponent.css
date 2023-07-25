@@ -22,11 +22,12 @@
 .ad-description {
     font-size: 1rem;
     color: #555;
+    text-decoration: none; 
   }
 
   .ads-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 60px;
     justify-items: center;
   }
