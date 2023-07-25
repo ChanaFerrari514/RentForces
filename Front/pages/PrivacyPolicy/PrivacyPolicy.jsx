@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
             <div className="container">
         <h1><strong>Privacy Policy</strong></h1>
         <p>At RentForces, we are committed to ensuring the privacy and security of our users' personal information. This Privacy Policy outlines how we collect, use, and protect the data we collect from our users. By using our platform, you consent to the practices described in this Privacy Policy.</p>
-        <ol>
+        <ul>
             <li>
                 <strong>Information We Collect</strong>
                 <p>When you use our platform, we may collect certain personal information from you, including but not limited to your name, email address, and contact details. We may also collect non-personal information such as your IP address, browser type, and operating system for analytical purposes.</p>
@@ -30,6 +30,8 @@ const PrivacyPolicy = () => {
             <li>
                 <strong>How We Use Your Information</strong>
             <p>We use the information we collect to provide and improve our services, customize your experience on our platform, and communicate with you about updates, promotions, and relevant information. We may also use your information to analyze user behavior, troubleshoot technical issues, and enforce our terms and conditions.</p>
+               </li>
+               <li>
                 <strong>Data Security</strong>
             <p>We take data security seriously and implement measures to protect your personal information from unauthorized access, disclosure, or alteration. However, please be aware that no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
             </li>
@@ -41,17 +43,17 @@ const PrivacyPolicy = () => {
                 <strong>Your Choices</strong>
                 <p>You have the right to access, update, and delete your personal information. You may also choose to opt-out of receiving promotional emails from us by following the unsubscribe instructions provided in the email.</p>
             </li>
-            <li>
+            
                 <strong>Changes to the Privacy Policy</strong>
                 <p></p>
-            </li>
-            <li>
+           
+           
                 <strong>Contact Us</strong>
                 <p>If you have any questions or concerns about our Privacy Policy or our data practices, please contact us at [info@rentforces.com].</p>
                
-            </li>
+            
             <strong>Last Updated: [07/22/2023]</strong>
-        </ol>       
+        </ul>       
         </div>
         </BackgroundContainer>
         </div>

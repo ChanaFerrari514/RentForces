@@ -24,7 +24,7 @@ const LegalNotice = () => {
         <p>Welcome to RentForces! By using our platform, you agree to comply with 
           the terms and conditions outlined in this Legal Notice. Please read 
           this notice carefully before using our services.</p>
-        <ol>
+        <ul>
           <li>
             <strong>Intellectual Property</strong>
             <p>All content, including but not limited to text, images, logos, and 
@@ -68,7 +68,7 @@ const LegalNotice = () => {
             </p>
           </li>
           <strong>Last Updated: [07/22/2023]</strong>
-        </ol>
+        </ul>
         </div>
         </BackgroundContainer>
       </div>
