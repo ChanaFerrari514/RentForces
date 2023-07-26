@@ -16,7 +16,7 @@ const BackgroundContainer = styled.div`
 `;
 
 const PoliceBadgeIcon = styled.img`
-  margin-top: 30px; 
+  margin-top: 29px; 
 `;
 
 const UserDashboard = () => {
