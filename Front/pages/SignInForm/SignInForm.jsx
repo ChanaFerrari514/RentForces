@@ -39,9 +39,9 @@ const SignInForm = ({ setIsLoggedIn }) => {
       	localStorage.removeItem('access_token');
       	localStorage.setItem('access_token', response.data.access_token);
 				//localStorage.setItem('refresh_token', response.data.refresh);
-        setIsLoggedIn(true);
         // Rediriger vers le tableau de bord de l'utilisateur en cas de succès
         location[1]('/user-dashboard');
+        window.location.reload();
       })
       .catch((error) => {
         console.error(error);

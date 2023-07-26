@@ -34,19 +34,15 @@ const SignUpForm = ({ setIsLoggedIn }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+
     axios.post('http://127.0.0.1:4000/auth/signup', formData)
       .then((response) => {
       	console.log(response.data);
-        if (response.data.access_token) {
-          setIsLoggedIn(true);
-
       	localStorage.removeItem('access_token');
       	localStorage.setItem('access_token', response.data.access_token);
         // Rediriger vers la page UserDashboard en cas de succès
         location[1]('/user-dashboard');
-      } else {
-       
-      }
+        window.location.reload();
       })
       .catch((error) => {
         console.error(error);

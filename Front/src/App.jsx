@@ -12,11 +12,10 @@ import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
 import ContactUs from '../pages/ContactUs/ContactUs';
 import SignInForm from '../pages/SignInForm/SignInForm';
 import SignUpForm from '../pages/SignUpForm/SignUpForm';
+import LogOut from '../pages/LogOut/LogOut';
 import UserDashboard from '../pages/UserDashboard/UserDashboard';
 import RentYourHome from '../pages/RentYourHome/RentYourHome';
 import Help from '../pages/Help/Help';
-import CustomModal from './components/LogOut/CustomModal';
-import { MDBBtn, MDBModal, MDBModalDialog, MDBModalContent, MDBModalHeader, MDBModalTitle, MDBModalBody, MDBModalFooter, } from "mdb-react-ui-kit";
 import { Router, Switch, Redirect, Route, Link } from 'wouter';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -40,14 +39,8 @@ const bottomLinks = ["Legal Notice", "Privacy Policy", "Contact Us"];
 
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-    // Fonction pour gérer la déconnexion de l'utilisateur
-    const handleLogout = () => {
-      // Supprimez le jeton d'accès de la mémoire locale pour effectuer la déconnexion
-      localStorage.removeItem('access_token');
-      // Mettez à jour l'état isLoggedIn pour indiquer que l'utilisateur est déconnecté
-      setIsLoggedIn(false);
-    };
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+ 
   
 
   return (
@@ -57,14 +50,7 @@ const App = () => {
       <NavbarTop links={topLinks} />
       <NavbarBottom links={bottomLinks} /> 
 
-      {isLoggedIn && (
-        <CustomModal
-          buttonText="Log Out" // Texte du bouton de déconnexion
-          onConfirm={handleLogout} // Fonction à appeler lors de la confirmation de déconnexion
-          modalTitle="Déconnexion" // Titre du pop-up de confirmation
-          modalMessage="Êtes-vous sûr de vouloir vous déconnecter ?" // Message du pop-up de confirmation
-        />
-      )}
+  
       
       
       <Switch>
@@ -86,6 +72,10 @@ const App = () => {
 
           <Route path="/sign-in">
             <SignInForm setIsLoggedIn={setIsLoggedIn} />
+          </Route> 
+
+          <Route path="/log-out">
+            <LogOut />
           </Route> 
 
           <Route path="/legal-notice">
