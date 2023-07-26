@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
 
         if(!email || !password) return next(errors[400])
 
-        if(password.length < 8) return next(errors['pass_length'])
+        if(password.length < 4) return next(errors['pass_length'])
     next()
 }
 
