@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import backgroundImg from '../../public/imgicons/police_blackandwhite.jpg';
+
 
 const BackgroundContainer = styled.div`
-  background-image: url(${backgroundImg});
+  background-image: url('/imgicons/police_blackandwhite.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0;

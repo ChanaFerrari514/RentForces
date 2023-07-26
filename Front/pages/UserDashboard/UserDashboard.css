@@ -1,31 +1,31 @@
 .userdashboard-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .userdashboard-title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .userdashboard-text {
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .userdashboard-email {
-    font-style: italic;
-    margin-top: 20px;
-  }
-  
-  .userdashboard-link {
-    color: #007bff;
-    text-decoration: underline;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.userdashboard-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.userdashboard-text {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.larger-text {
+  font-size: 24px; /* Taille de police plus grande pour le deuxième paragraphe */
+}
+
+
+.userdashboard-link {
+  color: #007bff;
+  text-decoration: underline;
+}

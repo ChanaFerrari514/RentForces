@@ -24,7 +24,7 @@ const AdDetails = () => {
     );
   }
 
-  const { title, imageSrc, image2Src, adDescription, wifiIconSrc, wifiIconAlt, parkingIconSrc, parkingIconAlt, price } = state;
+  const { title, imageSrc, image2Src,image3Src, image4Src, adDescription, wifiIconSrc, wifiIconAlt, parkingIconSrc, parkingIconAlt, price } = state;
 
   // Create a callback function for handling the date change event
   const onChangeCallback = (selectedDate) => {
@@ -49,14 +49,26 @@ const AdDetails = () => {
           </Carousel.Caption>
         </Carousel.Item>
 
+        <Carousel.Item>
+          <img src={`/${image3Src}`} alt={title} className="carousel-image" />
+          <Carousel.Caption>
+          </Carousel.Caption>
+        </Carousel.Item>
 
+        <Carousel.Item>
+          <img src={`/${image4Src}`} alt={title} className="carousel-image" />
+          <Carousel.Caption>
+          </Carousel.Caption>
+        </Carousel.Item>
 
       </Carousel>
-      <p>{adDescription}</p>
+      <p style={{ fontSize: '26px' }}>{adDescription}</p>
       <img src={`/${wifiIconSrc}`} alt={wifiIconAlt} className="ad-icon" />
       <img src={`/${parkingIconSrc}`} alt={parkingIconAlt} className="ad-icon" />
+     
       <p>Prix : €{price}</p>
 
+      <p>Check Out Availabilities</p>
       <DatePicker id="datepicker-id" name="date-demo" onChange={onChangeCallback} value={'01/02/2023'} />
     </div>
     

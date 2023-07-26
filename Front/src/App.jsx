@@ -15,13 +15,14 @@ import SignUpForm from '../pages/SignUpForm/SignUpForm';
 import UserDashboard from '../pages/UserDashboard/UserDashboard';
 import RentYourHome from '../pages/RentYourHome/RentYourHome';
 import Help from '../pages/Help/Help';
+import CustomModal from './components/LogOut/CustomModal';
+import { MDBBtn, MDBModal, MDBModalDialog, MDBModalContent, MDBModalHeader, MDBModalTitle, MDBModalBody, MDBModalFooter, } from "mdb-react-ui-kit";
 import { Router, Switch, Redirect, Route, Link } from 'wouter';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-
 library.add(faUser);
 
-const img = { src: "icons8-police-40.png", alt: "icon-police-figure" }; 
+const img = { src: "/imgicons/icons8-police-40.png", alt: "icon-police-figure" }; 
 const topLinks = [{ text: "Home", isDropdown: false },  { text: "Rent Your Home", isDropdown: false },
 {
   text: "Sign Up",
@@ -38,16 +39,32 @@ const topLinks = [{ text: "Home", isDropdown: false },  { text: "Rent Your Home"
 const bottomLinks = ["Legal Notice", "Privacy Policy", "Contact Us"];
 
 
-
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+    // Fonction pour gérer la déconnexion de l'utilisateur
+    const handleLogout = () => {
+      // Supprimez le jeton d'accès de la mémoire locale pour effectuer la déconnexion
+      localStorage.removeItem('access_token');
+      // Mettez à jour l'état isLoggedIn pour indiquer que l'utilisateur est déconnecté
+      setIsLoggedIn(false);
+    };
+  
 
   return (
     <Router>
     <div>
       <Header title1="RENT" img={img} title2="FORCES"  />
       <NavbarTop links={topLinks} />
-      <NavbarBottom links={bottomLinks} />    
+      <NavbarBottom links={bottomLinks} /> 
+
+      {isLoggedIn && (
+        <CustomModal
+          buttonText="Log Out" // Texte du bouton de déconnexion
+          onConfirm={handleLogout} // Fonction à appeler lors de la confirmation de déconnexion
+          modalTitle="Déconnexion" // Titre du pop-up de confirmation
+          modalMessage="Êtes-vous sûr de vouloir vous déconnecter ?" // Message du pop-up de confirmation
+        />
+      )}
       
       
       <Switch>
